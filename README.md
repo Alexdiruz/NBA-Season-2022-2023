@@ -12,9 +12,7 @@ Visualizaciones Interactivas: Gráficos interactivos que ofrecen una perspectiva
 
 ## Conjunto de Datos:
 
-Los datos utilizados en este análisis provienen de fuentes confiables de la NBA APP. Se incluyen datos detallados de juegos y equipos para una comprensión completa del rendimiento durante la temporada.
-
-## Objetivos:
+Los datos utilizados en este análisis fueron obtenidos de la página web de NBA APP. Se han realizado cambios (limpieza) en los datos sin afectar su veracidad, con el propósito de complementar la información y facilitar su manejo.
 
 Identificar Tendencias: Descubrir patrones y tendencias en el rendimiento de los equipos a lo largo de la temporada.
 
