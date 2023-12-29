@@ -12,7 +12,7 @@ Visualizaciones Interactivas: Gráficos interactivos que ofrecen una perspectiva
 
 ## Conjunto de Datos:
 
-Los datos utilizados en este análisis provienen de fuentes confiables de la NBA y están disponibles en el directorio data. Se incluyen datos detallados de juegos, jugadores y equipos para una comprensión completa del rendimiento durante la temporada.
+Los datos utilizados en este análisis provienen de fuentes confiables de la NBA APP. Se incluyen datos detallados de juegos y equipos para una comprensión completa del rendimiento durante la temporada.
 
 ## Objetivos:
 
