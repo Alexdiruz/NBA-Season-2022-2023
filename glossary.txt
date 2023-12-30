@@ -1,5 +1,5 @@
 DATE - Game Date
-TEAM - Team to whic the stats belong
+TEAM - Team to which the stats belong
 VS - Team's opponent
 H/A - Home/Away
 W/L - Win/Loss
