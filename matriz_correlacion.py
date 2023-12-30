@@ -1,12 +1,12 @@
-#Librerías
+#Librerías.
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-#Base de datos
+#Base de datos.
 team_stats = pd.read_csv('team_stats.csv')
 
-#Función matriz_correlación
+#Función matriz_correlación.
 def matriz_correlacion(dataframe, columnas):
 
     # Se extraen las columnas indicadas del dataframe indicado.
@@ -26,11 +26,12 @@ def matriz_correlacion(dataframe, columnas):
     plt.title('Matriz de Correlación')
     plt.show()
 
-#Selección de columnas y llamada de función
-# Para esta matriz de correlación, se utilizan únicamente las variables númericas
+#Selección de columnas y llamada de función.
+# Para esta matriz de correlación, se utilizan únicamente las variables númericas.
 cols = ['MIN', 'PTS', 'FGM', 'FGA', 'FG%', '3PM', '3PA', '3P%','FTM', 'FTA', 'FT%', 'OREB', 'DREB',
         'REB', 'AST', 'STL', 'BLK', 'TOV', 'PF']
 
+# Se utiliza la función con los parámetros correspondientes.
 matriz_correlacion(team_stats, cols)
 
 #Resultados:
