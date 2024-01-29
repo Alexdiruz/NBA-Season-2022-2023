@@ -4,7 +4,7 @@ Este repositorio contiene código y recursos relacionados con el análisis de la
 
 ## Contenido Destacado:
 
-Exploración de Datos: Jupyter Notebooks que exploran y limpian los datos de la temporada actual de la NBA.
+Exploración de Datos: Código Python que explora y limpia los datos de la temporada actual de la NBA.
 
 Análisis Estadístico: Código Python para realizar análisis estadísticos avanzados sobre el rendimiento de los equipos.
 
