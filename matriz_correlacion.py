@@ -18,7 +18,7 @@ def matriz_correlacion(dataframe, columnas):
     plt.figure(figsize=(len(columnas), len(columnas)))
 
     # Se grafica la matriz mostrando las correlaciones con dos cifras decimales. Se utilizó una paleta de
-    #colores secuencial para facilitar la lectura.
+    #colores secuencial para facilitar la visualización.
     sns.heatmap(matriz_correlacion, annot=True, cmap='seismic', fmt=".2f", linewidths=0.4, vmin=-1, vmax=1)
     plt.title('Matriz de Correlación')
     plt.show()
