@@ -3,6 +3,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 
+# Base de datos.
 team_stats = pd.read_csv('team_stats.csv')
 
 def matriz_correlacion(dataframe, columnas):
