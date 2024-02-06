@@ -1,14 +1,12 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Wed Jan 31 00:50:30 2024
-
-@author: alexd
-"""
-
+#Librerías.
 import pandas as pd
+import matplotlib.pyplot as plt
+import numpy as np
 
+#Base de datos.
 team_stats = pd.read_csv('team_stats_conteo.csv')
 
+#Clasificación equipos.
 teams = team_stats['TEAM'].unique()
 p_g = []
 
@@ -30,8 +28,9 @@ equipos_mid = equipos[10:20]
 equipos_bottom = equipos[20:30]
 
 
-#%% Medias por clasificación
+#Medias por clasificación.
 
+# Función que genera un DataFrame con las medias de todas las variables numéricas y equipos de la base de datos según la clasificación de su rival.
 def obtener_medias_por_clasificacion(team_stats, equipos, clasificaciones):
     estadisticas_dict = {}
 
@@ -58,8 +57,9 @@ medias_vs_mid = pd.DataFrame(medias_dict[tuple(equipos_mid)])
 medias_vs_bottom = pd.DataFrame(medias_dict[tuple(equipos_bottom)])
 
 
-#%% Varianzas por clasificación
+#Varianzas por clasificación.
 
+# Función que genera un DataFrame con las varianzas de todas las variables numéricas y equipos de la base de datos según la clasificación de su rival.
 def obtener_varianzas_por_clasificacion(team_stats, equipos, clasificaciones):
     estadisticas_dict = {}
 
@@ -83,8 +83,9 @@ varianzas_vs_top = pd.DataFrame(varianzas_dict[tuple(equipos_top)])
 varianzas_vs_mid = pd.DataFrame(varianzas_dict[tuple(equipos_mid)])
 varianzas_vs_bottom = pd.DataFrame(varianzas_dict[tuple(equipos_bottom)])
 
-#%% Desviaciones estándar por clasificación
+#Desviaciones estándar por clasificación.
 
+# Función que genera un DataFrame con las varianzas de todas las variables numéricas y equipos de la base de datos según la clasificación de su rival.
 def obtener_desviaciones_estandar_por_clasificacion(team_stats, equipos, clasificaciones):
     estadisticas_dict = {}
 
@@ -109,13 +110,10 @@ desviaciones_vs_mid = pd.DataFrame(desviaciones_dict[tuple(equipos_mid)])
 desviaciones_vs_bottom = pd.DataFrame(desviaciones_dict[tuple(equipos_bottom)])
 
 
-#%% Visualización
+#Visualización.
 
-
-import matplotlib.pyplot as plt
-import numpy as np
-
-# Función para visualizar medias y desviaciones estándar de todos los equipos de mayor a menor
+# Función para visualizar medias y desviaciones estándar de todos los equipos de mayor a menor únicamente de la
+# variable seleccionada
 def visualizar_datos(variable, clasificacion):
     medias = medias_vs_top.loc[variable]
     desviaciones = desviaciones_vs_top.loc[variable]
@@ -137,11 +135,11 @@ def visualizar_datos(variable, clasificacion):
 
 visualizar_datos('FGM','equipos top')
 
-#%%Función comparativa
+#Función comparativa.
 
 # Función que crea un conjunto de gráficas de barras para comparar las medias y desviaciones estádar de las estadísiticas de un
-#equipo en diferentes variables, clasificadas por equipos de nivel superior (Top Teams), equipos de nivel medio (Mid Teams) y
-#equipos de nivel inferior (Bottom Teams).
+# equipo en diferentes variables, clasificadas por equipos de nivel superior (Top Teams), equipos de nivel medio (Mid Teams) y
+# equipos de nivel inferior (Bottom Teams).
 
 def comparar_medias_con_desviacion_estandar(equipo, var_teams):
     num_vars = len(var_teams)
@@ -185,9 +183,6 @@ def comparar_medias_con_desviacion_estandar(equipo, var_teams):
     plt.tight_layout(rect=[0, 0, 1, 0.96])
     plt.show()
 
-var_teams = medias_vs_top.index.tolist()
+
+var_teams = ['MIN','PTS','FGM','FGA','FG%','3PM','3PA','3P%','FTM','FTA','FT%','OREB','DREB','REB','AST','STL','BLK','TOV','PF']
 comparar_medias_con_desviacion_estandar('MIL', var_teams)
-
-
-    
-
